@@ -1,0 +1,17 @@
+.tools{
+    display: flex;
+    flex-direction: row;
+}
+
+.categoriesAndSubCategories{
+    flex: 0.4;
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+}
+
+.components{
+    flex: 0.6;
+    background-color: white;
+    border-radius: 15px;
+}

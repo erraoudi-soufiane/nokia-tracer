@@ -1,0 +1,15 @@
+.workspace{
+    display: flex;
+    flex-direction: column;
+}
+
+.drawingSpace{
+    margin-top: 25px;
+    background-color: white;
+    border-radius: 15px;
+    height: 800px;
+}
+
+.workspace__tools{
+    margin-top: 3px;
+}

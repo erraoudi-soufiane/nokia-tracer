@@ -1,0 +1,19 @@
+.categories{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    height: 50px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+}
+
+
+
+.category__img :hover{
+    cursor: pointer;
+}
+
+
+.active{
+    background-color: green;
+}
