@@ -5,19 +5,19 @@ function DraggableComponent({component, style}) {
 
     const [{isDragging}, drag] = useDrag({
         type: 'image', 
-        item: { url: component}, 
+        item: { url: component.url, id: component.id}, 
         collect: (monitor) => ({
           isDragging: !!monitor.isDragging(),
         }),
       });
     if (style) {
-      return <button ref={drag} style={style} >
-      {component}
+      return <button style={style} >
+      {component.url}
     </button>
     }
   return (
     <button ref={drag} className="draggable-component" >
-    {component}
+    {component.url}
   </button>
 );
 }

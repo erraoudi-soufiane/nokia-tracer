@@ -27,8 +27,9 @@ function DrawingSpace({board})  {
             position: 'absolute',
             left:`${handleDropPosition(component.dropPosition).x}px`,
             top: `${handleDropPosition(component.dropPosition).y}px`,
+            cursor: 'move'
           }}
-          key={index} component={component.url}/>
+          key={index} component={component}/>
         })}
     </div>
   );
