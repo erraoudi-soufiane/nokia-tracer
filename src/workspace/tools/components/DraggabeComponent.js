@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDrag } from 'react-dnd';
 
-function DraggableComponent({component, style}) {
+function DraggableComponent({component, style, setIsCreatingConnection, setConnectionStart}) {
 
     const [{isDragging}, drag] = useDrag({
         type: 'image', 
@@ -9,9 +9,15 @@ function DraggableComponent({component, style}) {
         collect: (monitor) => ({
           isDragging: !!monitor.isDragging(),
         }),
-      });
+    });
+
+    const handleDeviceClick = (deviceId, position) => {
+      setIsCreatingConnection(true);
+      setConnectionStart({ deviceId, position});
+    };
+
     if (style) {
-      return <button style={style} >
+      return <button style={style} onClick={handleDeviceClick(component.id, component.dropPosition)}>
       {component.url}
     </button>
     }

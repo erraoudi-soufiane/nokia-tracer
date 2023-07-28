@@ -13,18 +13,17 @@ function Workspace() {
     accept: "image",
     drop: (item, monitor) => {
       const dropPosition = monitor.getClientOffset();
-      addImageToBoard(item.url, dropPosition)
+      addImageToBoard(item.url, item.id, dropPosition)
     },
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
     }),
   }));
 
-  const addImageToBoard = (url, dropPosition) => {
-    setBoard((board) => [...board,{url,dropPosition}])
+  const addImageToBoard = (url, id, dropPosition) => {
+    setBoard((board) => [...board,{url, id, dropPosition}])
     console.log('component added to board')
   };
-
 
   return (
 
@@ -34,7 +33,7 @@ function Workspace() {
       </div>
 
       <div ref={drop} className="drawingSpace">
-        <DrawingSpace board={board}/>
+        <DrawingSpace board={board} />
       </div>
     </div>
   )
