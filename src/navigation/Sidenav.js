@@ -1,10 +1,8 @@
-import React from 'react'
-import "./Sidenav.css"
+import React from "react";
+import "./Sidenav.css";
 
 function Sidenav() {
-  return (
-    <div className='sidenav'>Sidenav</div>
-  )
+  return <div className="sidenav">Sidenav</div>;
 }
 
-export default Sidenav
+export default Sidenav;

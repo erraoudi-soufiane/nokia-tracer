@@ -1,8 +1,7 @@
-import { HTML5Backend } from 'react-dnd-html5-backend';
-import { DndProvider } from 'react-dnd';
-import './App.css';
-import Homepage from './Homepage';
-
+import { HTML5Backend } from "react-dnd-html5-backend";
+import { DndProvider } from "react-dnd";
+import "./App.css";
+import Homepage from "./Homepage";
 
 function App() {
   return (
